@@ -2,84 +2,12 @@ enum SpriteKindLegacy {
     Player,
     Projectile,
     Food,
-    Enemy
+    Enemy,
+    Food2
 }
-controller.combos.attachCombo("aaxb", function () {
-    SpecialPower = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. 4 4 4 . . 8 8 8 . . 8 8 8 . . 
-. 4 4 4 . . 8 8 8 . . 8 8 8 . . 
-. 4 4 4 . . 8 8 8 . . 8 8 8 . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, SpacePlane, 200, 0)
-})
-controller.combos.attachCombo("bbyya", function () {
-    SpecialPower3 = sprites.createProjectileFromSprite(img`
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
-`, SpacePlane, 200, 0)
-})
-controller.combos.attachCombo("yab", function () {
-    SpecialPower2 = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . 7 . . . . . . . . . . 
-. . . . . . 7 . . . . . . . . . 
-. . . . . . . 7 . . . . . . . . 
-. . . . . . . . 7 . . . . . . . 
-. . . . . . . . . 7 . . . . . . 
-. . . . . . . . . . 7 . . . . . 
-. 7 7 7 7 7 7 7 7 7 7 7 . . . . 
-. . . . . . . . . . 7 . . . . . 
-. . . . . . . . . 7 . . . . . . 
-. . . . . . . . 7 . . . . . . . 
-. . . . . . . 7 . . . . . . . . 
-. . . . . . 7 . . . . . . . . . 
-. . . . . 7 . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, SpacePlane, 200, 0)
-})
+namespace SpriteKind {
+    export const Food2 = SpriteKind.create()
+}
 sprites.onOverlap(SpriteKindLegacy.Player, SpriteKindLegacy.Food, function (sprite, otherSprite) {
     otherSprite.destroy(effects.confetti, 100)
     info.changeLifeBy(1)
@@ -124,19 +52,121 @@ sprites.onOverlap(SpriteKindLegacy.Projectile, SpriteKindLegacy.Enemy, function 
     otherSprite.destroy(effects.fire, 100)
     info.changeScoreBy(1)
 })
+controller.combos.attachCombo("ABAB", function () {
+    SpecialPower = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 4 4 4 . . 8 8 8 . . 8 8 8 . . 
+. 4 4 4 . . 8 8 8 . . 8 8 8 . . 
+. 4 4 4 . . 8 8 8 . . 8 8 8 . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpacePlane, 200, 0)
+})
+info.onCountdownEnd(function () {
+    End = sprites.create(img`
+. . . . f f f f f f f . . . . . 
+. . f f 1 1 1 1 1 1 1 f f . . . 
+. f 1 1 1 1 1 1 1 1 1 1 1 f . . 
+. f 1 1 1 1 1 1 1 1 1 1 1 f . . 
+f 1 1 f 1 1 1 1 1 f f 1 1 1 f . 
+f 1 1 1 f 1 1 1 1 f f 1 1 1 f . 
+f 1 1 1 1 1 1 1 1 1 1 1 1 1 f . 
+f 1 1 1 1 1 1 1 1 1 1 1 1 1 f . 
+f 1 1 1 1 1 1 1 1 1 1 1 1 2 f . 
+f 2 1 1 1 1 2 1 1 1 1 1 2 1 f . 
+f 1 2 2 1 1 1 1 1 1 2 2 2 2 f . 
+. f 1 2 2 1 2 2 2 1 2 2 2 f . . 
+. f 2 2 2 2 1 2 2 2 2 2 2 f . . 
+. . f f 2 2 2 2 2 2 2 f f . . . 
+. . . . f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpriteKindLegacy.Food2)
+    End.setVelocity(-50, Math.randomRange(-50, 50))
+    End.setPosition(180, Math.randomRange(8, 112))
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food2, function (sprite, otherSprite) {
+    game.over(true)
+})
+controller.combos.attachCombo("BBBAA", function () {
+    SpecialPower3 = sprites.createProjectileFromSprite(img`
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+`, SpacePlane, 200, 0)
+})
 sprites.onOverlap(SpriteKindLegacy.Enemy, SpriteKindLegacy.Player, function (sprite, otherSprite) {
     sprite.destroy()
     info.changeLifeBy(-1)
     scene.cameraShake(4, 500)
     music.baDing.play()
 })
+controller.combos.attachCombo("ABB", function () {
+    SpecialPower2 = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . 7 . . . . . . . . . . 
+. . . . . . 7 . . . . . . . . . 
+. . . . . . . 7 . . . . . . . . 
+. . . . . . . . 7 . . . . . . . 
+. . . . . . . . . 7 . . . . . . 
+. . . . . . . . . . 7 . . . . . 
+. 7 7 7 7 7 7 7 7 7 7 7 . . . . 
+. . . . . . . . . . 7 . . . . . 
+. . . . . . . . . 7 . . . . . . 
+. . . . . . . . 7 . . . . . . . 
+. . . . . . . 7 . . . . . . . . 
+. . . . . . 7 . . . . . . . . . 
+. . . . . 7 . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpacePlane, 200, 0)
+})
 let HarderBogey: Sprite = null
 let Life: Sprite = null
 let Drone: Sprite = null
-let Dart: Sprite = null
 let SpecialPower2: Sprite = null
 let SpecialPower3: Sprite = null
+let End: Sprite = null
 let SpecialPower: Sprite = null
+let Dart: Sprite = null
 let SpacePlane: Sprite = null
 SpacePlane = sprites.create(img`
 . . . . . . . . . . . . . . . . 
@@ -161,6 +191,7 @@ info.setLife(3)
 controller.moveSprite(SpacePlane, 200, 200)
 scene.setBackgroundColor(6)
 effects.clouds.startScreenEffect()
+info.startCountdown(5)
 game.onUpdateInterval(500, function () {
     Drone = sprites.create(img`
 . . . . . . . . . . . . . . . . 
