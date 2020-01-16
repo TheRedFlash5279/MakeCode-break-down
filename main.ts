@@ -7,8 +7,31 @@ enum SpriteKindLegacy {
 }
 namespace SpriteKind {
     export const Food2 = SpriteKind.create()
+    export const End1 = SpriteKind.create()
+    export const Game = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKindLegacy.Player, SpriteKindLegacy.Food, function (sprite, otherSprite) {
+namespace myTiles {
+    //% blockIdentity=images._tile
+    export const tile0 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+}
+sprites.onOverlap(SpriteKindLegacy.Player, SpriteKindLegacy.Food2, function (sprite, otherSprite) {
     otherSprite.destroy(effects.confetti, 100)
     info.changeLifeBy(1)
 })
@@ -73,28 +96,6 @@ controller.combos.attachCombo("ABAB", function () {
 `, SpacePlane, 200, 0)
 })
 info.onCountdownEnd(function () {
-    End = sprites.create(img`
-. . . . f f f f f f f . . . . . 
-. . f f 1 1 1 1 1 1 1 f f . . . 
-. f 1 1 1 1 1 1 1 1 1 1 1 f . . 
-. f 1 1 1 1 1 1 1 1 1 1 1 f . . 
-f 1 1 f 1 1 1 1 1 f f 1 1 1 f . 
-f 1 1 1 f 1 1 1 1 f f 1 1 1 f . 
-f 1 1 1 1 1 1 1 1 1 1 1 1 1 f . 
-f 1 1 1 1 1 1 1 1 1 1 1 1 1 f . 
-f 1 1 1 1 1 1 1 1 1 1 1 1 2 f . 
-f 2 1 1 1 1 2 1 1 1 1 1 2 1 f . 
-f 1 2 2 1 1 1 1 1 1 2 2 2 2 f . 
-. f 1 2 2 1 2 2 2 1 2 2 2 f . . 
-. f 2 2 2 2 1 2 2 2 2 2 2 f . . 
-. . f f 2 2 2 2 2 2 2 f f . . . 
-. . . . f f f f f f f . . . . . 
-. . . . . . . . . . . . . . . . 
-`, SpriteKindLegacy.Food2)
-    End.setVelocity(-50, Math.randomRange(-50, 50))
-    End.setPosition(180, Math.randomRange(8, 112))
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food2, function (sprite, otherSprite) {
     game.over(true)
 })
 controller.combos.attachCombo("BBBAA", function () {
@@ -164,7 +165,6 @@ let Life: Sprite = null
 let Drone: Sprite = null
 let SpecialPower2: Sprite = null
 let SpecialPower3: Sprite = null
-let End: Sprite = null
 let SpecialPower: Sprite = null
 let Dart: Sprite = null
 let SpacePlane: Sprite = null
@@ -190,8 +190,8 @@ SpacePlane.setFlag(SpriteFlag.StayInScreen, true)
 info.setLife(3)
 controller.moveSprite(SpacePlane, 200, 200)
 scene.setBackgroundColor(6)
-effects.clouds.startScreenEffect()
-info.startCountdown(5)
+effects.blizzard.startScreenEffect()
+info.startCountdown(180)
 game.onUpdateInterval(500, function () {
     Drone = sprites.create(img`
 . . . . . . . . . . . . . . . . 

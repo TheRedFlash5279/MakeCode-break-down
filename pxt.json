@@ -1,17 +1,20 @@
 {
     "name": "Break Down",
+    "description": "",
     "dependencies": {
         "device": "*",
         "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.21"
     },
-    "description": "",
     "files": [
         "main.blocks",
         "main.ts",
         "README.md"
     ],
-    "preferredEditor": "blocksprj",
     "testFiles": [
         "test.ts"
-    ]
+    ],
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
 }
